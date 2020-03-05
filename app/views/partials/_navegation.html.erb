@@ -1,0 +1,23 @@
+
+<header>
+  <nav class="be-red white large-padding">
+    <div class="row">
+      <div class="col-sm">
+        <%= link_to "Inicio", root_path %>
+      </div>
+      <% if user_signed_in? %>
+      <div class="col-sm">
+        <%= link_to "Cerrar sesion", destroy_user_session_path, method: :delete %>
+      </div>
+      <%else%>
+      <div class="col-sm">
+        <%= link_to "Iniciar sesion", new_user_session_path %>
+      </div>
+      <div class="col-sm">
+        <%= link_to "Crear Cuenta", new_user_registration_path %>
+      </div>
+    </div>
+    <% end%>    
+  </nav>
+</header>
+

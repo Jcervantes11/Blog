@@ -1,4 +1,5 @@
-<h1> HELLO, Welcome to ruby on rails </h1>
-<% [1,2,3,4].each do |number| %>
-<p>Numero: <%= number * 2 %> </p>
-<%end %>
+<% if user_signed_in? %>
+<div class="text-center">
+<h1> Bienvenido <%= current_user.email %></h1>
+</div>
+<% end %>
